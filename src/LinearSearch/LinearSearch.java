@@ -14,21 +14,19 @@ public class LinearSearch<E> {
 
     public static void main(String[] args) {
 
+        int[] sampleSize = {1000000, 10000000};
+        for (int n : sampleSize) {
+            Integer[] data = ArrayGenerator.generateOrderedArray(n);
 
-        Integer[] data = {24, 18, 12, 9, 16, 66, 32, 4};
+            long startTime = System.nanoTime();
+            for (int k = 0; k < 100; k++){
+                LinearSearch.search(data, n);
+            }
+            long endTime = System.nanoTime();
 
-        int res = LinearSearch.search(data, 16);
-        System.out.println(res);
+            double time = (endTime - startTime) / 1000000000.0;
 
-        int res2 = LinearSearch.search(data, 17);
-        System.out.println(res2);
-
-        Student[] students = {new Student("Alice"),
-                              new Student("Blank"),
-                              new Student("Cirk")
-                                };
-        int res3 = LinearSearch.search(students, new Student("Blank"));
-        System.out.println(res3);
-
+            System.out.println("Sample size: " + n + " runs: " + 100 + " time: " + time);
+        }
     }
  }
