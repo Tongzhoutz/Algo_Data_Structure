@@ -29,5 +29,15 @@ public class SelectionSort {
         for (int e : arr)
             System.out.print(e + " ");
         System.out.println("");
+
+        Student[] students = { new Student("Alice", 89),
+                               new Student("Blank", 100),
+                               new Student("Cowles", 88)
+        };
+
+        selectionSort(students);
+
+        for (Student s : students)
+            System.out.println(s + " ");
     }
 }
