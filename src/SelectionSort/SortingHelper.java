@@ -29,6 +29,9 @@ public class SortingHelper {
             case "InsertionSortTwo":
                 InsertionSort.insertionSortTwo(arr);
                 break;
+            case "InsertionSortBackward":
+                InsertionSort.insertionSortBackward(arr);
+                break;
             default:
                 break;
         }
