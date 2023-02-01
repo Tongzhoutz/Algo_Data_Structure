@@ -24,20 +24,11 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        Integer[] arr = {6, 4, 2, 3, 1, 5};
-        selectionSort(arr);
-        for (int e : arr)
-            System.out.print(e + " ");
-        System.out.println("");
+        int[] dataSize = {10000, 100000};
 
-        Student[] students = { new Student("Alice", 89),
-                               new Student("Blank", 100),
-                               new Student("Cowles", 88)
-        };
-
-        selectionSort(students);
-
-        for (Student s : students)
-            System.out.println(s + " ");
+        for (int n : dataSize) {
+            Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
+            SortingHelper.sortTest("SelectionSort", arr);
+        }
     }
 }
