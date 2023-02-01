@@ -20,6 +20,9 @@ public class SortingHelper {
             case "SelectionSort":
                 SelectionSort.selectionSort(arr);
                 break;
+            case "SelectionSortTwo":
+                SelectionSort.selectionSortTwo(arr);
+                break;
             default:
                 break;
         }

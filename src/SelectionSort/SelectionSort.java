@@ -17,6 +17,18 @@ public class SelectionSort {
         }
     }
 
+    public static <E extends Comparable<E>> void selectionSortTwo(E[] arr) {
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            int maxIndex = i;
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr[j].compareTo(arr[maxIndex]) > 0)
+                    maxIndex = j;
+            }
+            swap(arr, i, maxIndex);
+        }
+    }
+
     public static <E> void swap(E[] arr, int i, int j) {
         E temp = arr[i];
         arr[i] = arr[j];
@@ -28,7 +40,7 @@ public class SelectionSort {
 
         for (int n : dataSize) {
             Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
-            SortingHelper.sortTest("SelectionSort", arr);
+            SortingHelper.sortTest("SelectionSortTwo", arr);
         }
     }
 }
