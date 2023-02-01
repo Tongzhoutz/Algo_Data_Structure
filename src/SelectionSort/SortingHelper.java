@@ -23,6 +23,12 @@ public class SortingHelper {
             case "SelectionSortTwo":
                 SelectionSort.selectionSortTwo(arr);
                 break;
+            case "InsertionSort":
+                InsertionSort.insertionSort(arr);
+                break;
+            case "InsertionSortTwo":
+                InsertionSort.insertionSortTwo(arr);
+                break;
             default:
                 break;
         }

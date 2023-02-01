@@ -33,6 +33,7 @@ public class SelectionSort {
         E temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+
     }
 
     public static void main(String[] args) {
